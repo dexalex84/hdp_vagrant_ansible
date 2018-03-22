@@ -1,0 +1,14 @@
+---
+- hosts: all
+  user: vagrant
+  sudo: True
+  tasks:
+    - name: test for ALL host current host {{ansible_hostname}}
+      command: echo test for ALL host {{ansible_hostname}}
+     
+- hosts: name_node_1
+  user: vagrant
+  sudo: True
+  tasks: 
+    - name: test for name_node_1
+      command: echo test for name_node_1
